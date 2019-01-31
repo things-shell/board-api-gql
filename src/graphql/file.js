@@ -26,7 +26,7 @@ export async function fetchFileList() {
  */
 export async function uploadFile(file) {
   let o = {
-    mutation: `mutation ($file: Upload!) { 
+    query: `mutation ($file: Upload!) { 
         singleUpload(
           file: $file
         ) { id filename mimetype encoding path createdAt updatedAt } 
@@ -45,9 +45,7 @@ export async function uploadFile(file) {
   fd.append('map', JSON.stringify(map))
   fd.append(0, file)
 
-  this.client.mutate()
-
-  const response = await fetch('/graphql', {
+  const response = await fetch(this.uri, {
     method: 'POST',
     body: fd
   })

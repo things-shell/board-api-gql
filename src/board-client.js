@@ -63,6 +63,7 @@ export default class BoardClient {
   constructor(uri = GRAPHQL_URI, errorHandler = DEFAULT_ERR_HANDLER, options = {}) {
     const cache = options.cache ? options.cache : new InMemoryCache()
 
+    this.uri = uri
     this.client = new ApolloClient({
       defaultOptions,
       cache,
