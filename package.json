@@ -1,6 +1,6 @@
 {
   "name": "@things-shell/board-api-gql",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "main": "dist/board-client.js",
   "repository": "https://github.com/things-shell/board-api-gql.git",
   "author": "Hearty Oh <heartyoh@hatiolab.com>",
