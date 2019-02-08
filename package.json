@@ -1,6 +1,6 @@
 {
   "name": "@things-shell/board-api-gql",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "src/index.js",
   "repository": "https://github.com/things-shell/board-api-gql.git",
   "author": "Hearty Oh <heartyoh@hatiolab.com>",
@@ -17,7 +17,9 @@
     "apollo-link-error": "^1.1.7",
     "apollo-link-http": "^1.5.11",
     "graphql": "^14.1.1",
-    "graphql-tag": "^2.10.1"
+    "graphql-tag": "^2.10.1",
+    "graphql-tools": "^4.0.4",
+    "graphql-upload": "^8.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
