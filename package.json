@@ -1,6 +1,6 @@
 {
   "name": "@things-shell/board-api-gql",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "dist/board-client.js",
   "module": "dist/board-client.mjs",
   "jsnext:main": "dist/board-client.mjs",
