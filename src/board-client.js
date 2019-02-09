@@ -112,7 +112,8 @@ export default class BoardClient {
       link: ApolloLink.from([
         onError(errorHandler),
         new HttpLink({
-          uri
+          uri,
+          credentials: 'include'
         })
       ]),
       ...options
