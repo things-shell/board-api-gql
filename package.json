@@ -1,6 +1,6 @@
 {
   "name": "@things-shell/board-api-gql",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "main": "dist/board-client.js",
   "module": "dist/board-client.mjs",
   "jsnext:main": "dist/board-client.mjs",
@@ -13,8 +13,8 @@
     "prepublish": "rollup -c --environment BUILD:production"
   },
   "dependencies": {
-    "apollo-cache-inmemory": "^1.4.2",
-    "apollo-client": "^2.4.12",
+    "apollo-cache-inmemory": "^1.4.3",
+    "apollo-client": "^2.4.13",
     "apollo-link": "^1.2.8",
     "apollo-link-error": "^1.1.7",
     "apollo-link-http": "^1.5.11",
@@ -24,17 +24,17 @@
     "graphql-upload": "^8.0.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
+    "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
     "babel-loader": "^8.0.5",
     "html-webpack-plugin": "^3.2.0",
-    "rollup": "^1.1.2",
+    "rollup": "^1.2.2",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-graphql": "^0.1.0",
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-terser": "^4.0.4",
-    "webpack": "^4.29.3",
+    "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.1.14",
     "webpack-node-externals": "^1.7.2"

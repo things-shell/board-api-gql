@@ -24,7 +24,8 @@ export default [
       {
         file: pkg.main,
         name: 'BoardClient',
-        format: 'umd'
+        format: 'umd',
+        sourcemap: true
       }
     ]
   },
@@ -34,7 +35,8 @@ export default [
     output: [
       {
         file: pkg.module,
-        format: 'esm'
+        format: 'esm',
+        sourcemap: true
       }
     ]
   }
