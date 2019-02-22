@@ -30,7 +30,7 @@ import {
   deletePublisher
 } from './graphql/publisher.js'
 import { fetchSettingList, /*fetchSetting,*/ createSetting, updateSetting, deleteSetting } from './graphql/setting.js'
-import { fetchFileList, uploadFile } from './graphql/file.js'
+import { fetchFileList, uploadFile, deleteFile } from './graphql/file.js'
 
 const GRAPHQL_URI = '/graphql'
 
@@ -104,6 +104,7 @@ export default class BoardClient {
 
     this.fetchFileList = fetchFileList.bind(this)
     this.uploadFile = uploadFile.bind(this)
+    this.deleteFile = deleteFile.bind(this)
 
     this.uri = uri
     this.client = new ApolloClient({

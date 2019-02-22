@@ -52,3 +52,20 @@ export async function uploadFile(file) {
 
   return await response.json()
 }
+
+export async function deleteFile(id) {
+  const response = await this.client.mutate({
+    mutation: gql`
+      mutation($id: String!) {
+        deleteFile(id: $id) {
+          id
+        }
+      }
+    `,
+    variables: {
+      id
+    }
+  })
+
+  return response.data
+}
