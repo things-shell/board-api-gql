@@ -7,7 +7,7 @@ export async function fetchBoardList(by, id) {
       query = gql`{
           ${by}(id:"${id}") {
             boards {
-              id name description width height thumbnail createdAt updatedAt
+              id name description fit width height thumbnail createdAt updatedAt
             }
           }
         }`
@@ -16,7 +16,7 @@ export async function fetchBoardList(by, id) {
       query = gql`{
           ${by}(id:"${id}") {
             boards {
-              id name description width height thumbnail createdAt updatedAt
+              id name description fit width height thumbnail createdAt updatedAt
             }
           }
         }`
@@ -29,6 +29,7 @@ export async function fetchBoardList(by, id) {
             id
             name
             description
+            fit
             width
             height
             thumbnail
@@ -52,6 +53,7 @@ export async function fetchBoard(id) {
           name
           description
           model
+          fit
           width
           height
           createdAt
@@ -77,7 +79,7 @@ export async function createBoard(board) {
     }
     */
 
-  var { name, description, model, width, height, published, group } = board
+  var { name, description, model, fit, width, height, published, group } = board
   model = JSON.stringify(model)
 
   const response = await this.client.mutate({
@@ -88,6 +90,7 @@ export async function createBoard(board) {
           name
           description
           model
+          fit
           width
           height
           createdAt
@@ -96,7 +99,7 @@ export async function createBoard(board) {
       }
     `,
     variables: {
-      board: { name, description, model, width, height, published },
+      board: { name, description, model, fit, width, height, published },
       group
     }
   })
@@ -115,7 +118,7 @@ export async function updateBoard(board) {
       published   : Boolean
     }
     */
-  var { id, name, description, model, width, height, published } = board
+  var { id, name, description, model, fit, width, height, published } = board
   model = JSON.stringify(model)
 
   const response = await this.client.mutate({
@@ -126,6 +129,7 @@ export async function updateBoard(board) {
           name
           description
           model
+          fit
           width
           height
           createdAt
@@ -135,7 +139,7 @@ export async function updateBoard(board) {
     `,
     variables: {
       id,
-      patch: { name, description, model, width, height, published }
+      patch: { name, description, model, fit, width, height, published }
     }
   })
 
