@@ -22,7 +22,7 @@ export default [
     plugins,
     output: [
       {
-        file: pkg.main,
+        file: 'dist/board-client.js',
         name: 'BoardClient',
         format: 'umd',
         sourcemap: true
@@ -34,7 +34,7 @@ export default [
     plugins,
     output: [
       {
-        file: pkg.module,
+        file: 'dist/board-client.mjs',
         format: 'esm',
         sourcemap: true
       }
